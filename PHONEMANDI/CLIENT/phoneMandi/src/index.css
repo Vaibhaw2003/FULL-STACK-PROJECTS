@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body, #root {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+#navbar {
+  background-color:greenyellow;
+  color: white;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+
+}
+#navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+} 
+#navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  color: white;
+}
+#navbar ul li {
+  cursor: pointer;
+}
+#navbar ul li:hover {
+  text-decoration: underline;
+} 
+
