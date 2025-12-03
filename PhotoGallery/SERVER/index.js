@@ -15,7 +15,7 @@ mongoose.connect(MONGO_URL)
   .catch(err => console.log("DB Error:", err));
 
 app.get("/", (req, res) => {
-  res.send("API working");
+  res.send("Welcome to the Photo Gallery API");
 });
 
 app.post("/register", async (req, res) => {

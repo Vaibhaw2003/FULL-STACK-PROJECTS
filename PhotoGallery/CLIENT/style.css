@@ -15,10 +15,12 @@ html, body {
     text-align: center;
 }
 .register-Form{
+    grid-area: form;
     display: flex;
     justify-content: center;
     align-items: center;
     height: calc(100vh - 60px);
+
 
 }
 .register-form {
@@ -47,6 +49,7 @@ html, body {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+
 }
 .register-form button:hover {
     background-color: #555;
