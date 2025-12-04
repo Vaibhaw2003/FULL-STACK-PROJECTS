@@ -7,11 +7,9 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB connect
-mongoose.connect("mongodb://localhost:27017/fullstackDemo", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => console.log("MongoDB Connected"))
-  .catch(err => console.log(err));
+mongoose.connect("mongodb://localhost:27017/mydatabase")
+.then(() => console.log("MongoDB Connected"))
+.catch(err => console.log(err));
 
 // User Model
 const User = mongoose.model("User", {
@@ -20,17 +18,25 @@ const User = mongoose.model("User", {
     password: String
 });
 
-// API Route
+// Register API
 app.post("/register", async (req, res) => {
-    const { name, email, password } = req.body;
+    try {
+        const { name, email, password } = req.body;
 
-    const user = new User({ name, email, password });
-    await user.save();
+        // Already exists check
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            return res.json({ message: "Email Already Registered!" });
+        }
 
-    res.json({ message: "User Registered Successfully!" });
+        const user = new User({ name, email, password });
+        await user.save();
+
+        res.json({ message: "User Registered Successfully!" });
+    } catch (error) {
+        res.json({ message: "Error Occurred", error });
+    }
 });
 
-
-port = 5000;
-app.listen(5000, () => console.log(`Server running on port ${port}`));
-
+const port = 5000;
+app.listen(port, () => console.log(`Server running on port ${port}`));
