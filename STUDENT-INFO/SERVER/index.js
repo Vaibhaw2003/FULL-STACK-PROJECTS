@@ -1,7 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const Student = require("./models/Student");
+const Student = require("./models/student");
+
 
 const app = express();
 app.use(cors());

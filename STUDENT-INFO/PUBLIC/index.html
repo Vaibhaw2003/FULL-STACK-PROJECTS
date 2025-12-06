@@ -7,25 +7,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-         <h2>Student Information Form</h2>
+    <div class="main">
+        <nav class="nav">
+            <h1>
+                studend info pages </h1>
+            <li>
+                <a href="home">home</a>
+                <a href="about">about</a>
+                <a href="student">student</a>
+            </li>
+        </nav>
 
-        <form id="studentForm">
-         <input type="text" id="name" placeholder="Enter Name" required>
-         <input type="email" id="email" placeholder="Enter Email" required>
-         <input type="text" id="course" placeholder="Enter Course" required>
-         <button type="submit">Save Student</button>
-         </form>
+        <div>
+            <form id="studentForm">
+               <input type="text" id="name" placeholder="Enter Name" required>
+               <input type="email" id="email" placeholder="Enter Email" required>
+               <input type="text" id="course" placeholder="Enter Course" required>
+               <button type="submit">Save Student</button>
+            </form>
 
-         <h3>Saved Students</h3>
-         <ul id="studentList"></ul>
+           <h3>Saved Students</h3>
+           <ul id="studentList"></ul>
+         </div>
+
+         <div>
+            <footer class="footer">
+                <h1>thanks</h1>
+            </footer>
+         </div>
     </div>
 
-
-
-
-
     <script src="script.js"></script>
-    
 </body>
 </html>
