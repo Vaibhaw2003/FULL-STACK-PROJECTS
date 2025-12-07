@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Material - ExamSathi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">ExamSathi</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="content-section material-page">
+        <div class="container">
+            <a href="#" class="back-link" id="backLink">← Back to Units</a>
+            <h1 class="page-title" id="materialTitle">Study Material</h1>
+            <p class="page-subtitle" id="materialSubtitle"></p>
+
+            <!-- Notes Section -->
+            <section class="material-section">
+                <h2 class="section-title">📝 Notes</h2>
+                <div class="notes-container" id="notesContainer">
+                    <div class="notes-content" id="notesContent">
+                        Loading notes...
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video Lectures Section -->
+            <section class="material-section">
+                <h2 class="section-title">🎥 Video Lectures</h2>
+                <div class="videos-container" id="videosContainer">
+                    <!-- Videos will be loaded dynamically -->
+                </div>
+            </section>
+
+            <!-- Book References Section -->
+            <section class="material-section">
+                <h2 class="section-title">📚 Book References</h2>
+                <div class="books-container" id="booksContainer">
+                    <!-- Books will be loaded dynamically -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header" id="chatbotHeader">
+            <div class="chatbot-title">
+                <span class="chatbot-icon">🤖</span>
+                <span>Ask Gemini</span>
+            </div>
+            <button class="chatbot-toggle" id="chatbotToggle">−</button>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="bot-message">
+                    Hi! I'm your AI study assistant. Ask me anything about this topic!
+                </div>
+            </div>
+            <div class="chatbot-input-container">
+                <input type="text" id="chatbotInput" placeholder="Type your question..." />
+                <button id="chatbotSend">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ExamSathi. All rights reserved.</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/material.js"></script>
+</body>
+</html>
